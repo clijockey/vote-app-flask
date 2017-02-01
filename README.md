@@ -57,13 +57,17 @@ The directory structure is;
 └── templates
     └── index.html
 ```
+The ```static/``` directory contains the images, javascript and CSS files used by the application. The ```templates/``` directory contains the basis for the HTML page.
 
+The ```app.py``` is the main code for the applicaton.
 
 ## Getting started
 
 
 
 ### Cloud Foundry
+
+![](https://www.google.co.uk/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwiGgrflou_RAhVBShQKHUWfDnQQjRwIBw&url=https%3A%2F%2Fblog.hazelcast.com%2Fcloud-foundry%2F&psig=AFQjCNGALK-NGGaH09PxUfF84Tk32QlxCg&ust=1486051312029611)
 
 To run on Cloud Foundry, I tested on [PWS](http://run.pivotal.io)
 
@@ -127,13 +131,22 @@ OK
 
 ### Docker
 
-Download [Docker for Mac or Windows](https://www.docker.com).
+![](https://www.google.co.uk/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjTkdrzou_RAhXCuRQKHUJmBPYQjRwIBw&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3ADocker_(container_engine)_logo.png&bvm=bv.145822982,d.ZGg&psig=AFQjCNEwoscxIJeGYXATInJLz5aufYHT0A&ust=1486051371672328)
 
-Run in this directory:
+NOTE: Since migrating the voting component to an individual repo this need to be be retested. A working version is [here](https://github.com/clijockey/miggins-vote-app).
+-----
 
-    $ docker-compose up
+Download [Docker for Mac or Windows](https://www.docker.com/products/overview).
 
-The app will be running at [http://localhost:5000](http://localhost:5000), and the results will be at [http://localhost:5001](http://localhost:5001).
+```
+git clone https://github.com/clijockey/vote-app-flask.git
+cd vote-ap-flask
+docker build -t br-coffee .
+
+```
+
+
+The app will be running at [http://localhost:5000](http://localhost:5000).
 
 ## Architecture
 

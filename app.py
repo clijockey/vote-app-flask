@@ -1,3 +1,5 @@
+
+
 #==============================================================================
 # Title:                app.py
 # Description:          This is the logic of the Mrs Miggins vote app using
@@ -68,7 +70,9 @@ def hello():
 
 
 if __name__ == "__main__":
+    #app.run(host='0.0.0.0', port=5000)
     app.run(host='0.0.0.0', port=port)
     #app.run(host='0.0.0.0', port=port, debug=True, threaded=True)
+
 
 
