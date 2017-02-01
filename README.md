@@ -67,7 +67,7 @@ The ```app.py``` is the main code for the applicaton.
 
 ### Cloud Foundry
 
-![](https://www.google.co.uk/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwiGgrflou_RAhVBShQKHUWfDnQQjRwIBw&url=https%3A%2F%2Fblog.hazelcast.com%2Fcloud-foundry%2F&psig=AFQjCNGALK-NGGaH09PxUfF84Tk32QlxCg&ust=1486051312029611)
+![](https://res.cloudinary.com/dalqykxs4/image/upload/c_scale,h_200/v1485969236/GitHub/cloud-foundry.png)
 
 To run on Cloud Foundry, I tested on [PWS](http://run.pivotal.io)
 
@@ -131,7 +131,7 @@ OK
 
 ### Docker
 
-![](https://www.google.co.uk/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjTkdrzou_RAhXCuRQKHUJmBPYQjRwIBw&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3ADocker_(container_engine)_logo.png&bvm=bv.145822982,d.ZGg&psig=AFQjCNEwoscxIJeGYXATInJLz5aufYHT0A&ust=1486051371672328)
+![](https://res.cloudinary.com/dalqykxs4/image/upload/v1485969236/GitHub/Docker_logo.png)
 
 NOTE: Since migrating the voting component to an individual repo this need to be be retested. A working version is [here](https://github.com/clijockey/miggins-vote-app).
 -----
