@@ -1,5 +1,6 @@
 # Big Rob Coffee Flask Application
 
+![Big Rob](https://res.cloudinary.com/dalqykxs4/image/upload/c_scale,w_74/v1485962518/GitHub/bigrob-transparant.png)
 
 ## Introduction
 
@@ -26,9 +27,53 @@ When the application is running you will be presented with a simple web page wit
 
 ![Vote app](https://res.cloudinary.com/dalqykxs4/image/upload/v1485962497/GitHub/Big-Rob-Coffee.png)
 
+### Configuration
+
+The directory structure is;
+
+```
+.
+├── Dockerfile
+├── Procfile
+├── README.md
+├── app.py
+├── requirements.txt
+├── static
+│   ├── images
+│   │   ├── bigrob.png
+│   │   ├── el-salvador.jpg
+│   │   ├── ethiopia.jpg
+│   │   └── rwanda.jpg
+│   ├── js
+│   │   ├── freelancer.js
+│   │   └── freelancer.min.js
+│   └── stylesheets
+│       ├── bootstrap.min.css
+│       ├── cover.css
+│       ├── font-awesome.min.css
+│       ├── freelancer.css
+│       ├── freelancer.min.css
+│       └── style.css
+└── templates
+    └── index.html
+```
+
+
 ## Getting started
 
+
+
 ### Cloud Foundry
+
+To run on Cloud Foundry, I tested on [PWS](http://run.pivotal.io)
+
+```
+git clone https://github.com/clijockey/vote-app-flask.git
+cd vote-ap-flask.git
+cf push br-coffee
+```
+
+### Docker
 
 Download [Docker for Mac or Windows](https://www.docker.com).
 
@@ -40,8 +85,8 @@ The app will be running at [http://localhost:5000](http://localhost:5000), and t
 
 ## Architecture
 
-This repo holds the front-end voting compoents however the following architecture is what I had in mind. You can see a single repo [here](https://github.com/clijockey/miggins-vote-app)
-![Architecture diagram](architecture.png)
+This repo holds the front-end voting compoents however the following architecture is what I had in mind. You can see a single repo [here](https://github.com/clijockey/miggins-vote-app) 
+![Architecture diagram](https://res.cloudinary.com/dalqykxs4/image/upload/v1485963209/GitHub/architecture.png)
 
 * A Python webapp which lets you vote between two options
 * A Redis queue which collects new votes
