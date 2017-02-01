@@ -69,8 +69,60 @@ To run on Cloud Foundry, I tested on [PWS](http://run.pivotal.io)
 
 ```
 git clone https://github.com/clijockey/vote-app-flask.git
-cd vote-ap-flask.git
+cd vote-ap-flask
 cf push br-coffee
+```
+
+You obviously need to be logged into your cloud foundry instance.
+The cf CLI should then kick of the process to deploy your application on Cloud Foundry.
+
+The important file in the directory for this is the ```Procfile``` file, it specifies what command is required to run the Python application in the container.
+
+#### Running
+
+Browse to the URL presented back you after the ```cf push``` command has complete.
+
+To check it's running issue the ```cf apps``` command;
+
+```
+tmp/vote-app-flask [ cf apps                                                                                                                             master ] 3:44 PM
+Getting apps in org ######## / space redwards as ##########...
+OK
+
+name        requested state   instances   memory   disk   urls
+br-coffee   started           1/1         512M     512M   br-coffee.cfapps.io
+
+```
+
+To get more detail about the running app use the ```cf app <app name>``` command;
+
+```
+tmp/vote-app-flask [ cf app br-coffee                                                                                                                    master ] 3:44 PM
+Showing health and status for app br-coffee in org ####### / space redwards as #########...
+OK
+
+requested state: started
+instances: 1/1
+usage: 512M x 1 instances
+urls: br-coffee.cfapps.io
+last uploaded: Wed Feb 1 14:51:03 UTC 2017
+stack: cflinuxfs2
+buildpack: python 1.5.14
+
+     state     since                    cpu    memory          disk           details
+#0   running   2017-02-01 03:16:01 PM   0.0%   16.5M of 512M   116M of 512M
+```
+
+#### Remove
+
+To remove the application if you no longer need it run ```cf delete <app name>```;
+
+```
+tmp/vote-app-flask [ cf delete br-coffee             master ] 3:41 PM
+
+Really delete the app br-coffee?> y
+Deleting app br-coffee in org ####### / space redwards as ##########...
+OK
 ```
 
 ### Docker
